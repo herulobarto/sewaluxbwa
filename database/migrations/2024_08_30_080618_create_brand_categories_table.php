@@ -12,10 +12,10 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('brand_categories', function (Blueprint $table) {
+            $table->id();
             $table->foreignId('brand_id')->constrained()->cascadeOnDelete();
             $table->foreignId('category_id')->constrained()->cascadeOnDelete();
             $table->softDeletes();
-            $table->id();
             $table->timestamps();
         });
     }
