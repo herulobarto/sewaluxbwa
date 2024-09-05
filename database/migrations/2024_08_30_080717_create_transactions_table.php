@@ -13,6 +13,7 @@ return new class extends Migration
     {
         Schema::create('transactions', function (Blueprint $table) {
             $table->id();
+            $table->string('name');
             $table->string('trx_id');
             $table->string('phone_number');
             $table->string('proof');
