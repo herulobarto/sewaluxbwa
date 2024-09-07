@@ -13,7 +13,7 @@
 <body>
 	<main class="max-w-[640px] mx-auto min-h-screen flex flex-col relative has-[#Bottom-nav]:pb-[144px]">
 		<div id="Top-navbar" class="flex items-center justify-between px-5 pt-5 w-full">
-			<a href="{{ url()->previous() }}">
+			<a href="{{ route('front.index') }}">
 				<div class="size-[44px] flex shrink-0">
 					<img src="{{asset('assets/images/icons/arrow-left.svg')}}" alt="icon" />
 				</div>
