@@ -102,7 +102,7 @@ class TransactionResource extends Resource
                 Tables\Columns\TextColumn::make('trx_id')
                 ->searchable(),
 
-                Tables\Columns\TextColumn::make('total-amount')
+                Tables\Columns\TextColumn::make('total_amount')
                 ->numeric()
                 ->prefix('Rp '),
 

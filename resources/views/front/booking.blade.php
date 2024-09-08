@@ -67,6 +67,7 @@
       {{-- ini untuk nominal harga nya agar terhubung ke booking.js --}}
       @csrf
       <input type="hidden" value="{{$product->price}}" id="productPrice"/>
+      <input type="hidden" name="delivery_type" value="pickup" id="deliveryType"/>
       <input type="hidden" name="duration" id="duration" value="1" class="absolute -z-10 opacity-0 w-1"
       required />
 
