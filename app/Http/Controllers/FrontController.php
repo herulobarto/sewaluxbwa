@@ -55,10 +55,24 @@ class FrontController extends Controller
 
     }
 
-    // cara cek session
+    // // cara cek session
+    // public function checkout(Product $product) {
+    //     $duration = session('duration');
+    //     dd($duration);
+    //     // diatas untuk cek session duration atau mau cek address atau yg lain tinggal diganti $address = session('address');
+    // }
+
     public function checkout(Product $product) {
         $duration = session('duration');
-        dd($duration);
-        // diatas untuk cek session duration atau mau cek address atau yg lain tinggal diganti $address = session('address');
+
+        $insurance = 900000;
+        $ppn = 0.11;
+        $price = $product->price;
+
+        $subTotal = $price * $duration;
+        $totalPpn = $subTotal * $ppn;
+        $grandTotal = $subTotal + $totalPpn + $insurance;
+
+        return view('front.checkout', compact('product', 'subTotal', 'totalPpn', 'grandTotal', 'insurance'));
     }
 }
