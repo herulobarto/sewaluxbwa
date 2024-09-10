@@ -7,7 +7,7 @@ Route::get('/', [FrontController::class, 'index'] ) ->name('front.index');
 
 Route::get('/transactions', [FrontController::class, 'transactions'] ) ->name('front.transactions');
 
-Route::post('/transactions/details', [FrontController::class, 'transactions_details'] ) ->name('front.transactions.details');
+Route::post('/transactions/details', [FrontController::class, 'transactions_details'] ) ->name('front.transaction.details');
 
 Route::get('/details/{product:slug}', [FrontController::class, 'details'] ) ->name('front.details');
 
@@ -15,7 +15,7 @@ Route::get('/booking/{product:slug}', [FrontController::class, 'booking'] ) ->na
 
 Route::post('/booking/{product:slug}/save', [FrontController::class, 'booking_save'] ) ->name('front.booking_save');
 
-Route::get('/success-booking/{transactions}', [FrontController::class, 'success_booking'] ) ->name('front.success.booking');
+Route::get('/success-booking/{transaction}', [FrontController::class, 'success_booking'] ) ->name('front.success.booking');
 
 Route::post('/checkout/finish', [FrontController::class, 'checkout_store'] ) ->name('front.checkout.store');
 

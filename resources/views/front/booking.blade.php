@@ -62,6 +62,13 @@
 				<img src="{{asset('assets//images/backgrounds/promo.png')}}" class="w-full h-full object-cover" alt="promo" />
 			</div>
 		</a>
+		@if($errors->any())
+		@foreach ($errors->all() as $error)
+			<div class="py-3 w-full rounded-3xl bg-[#FCCF2F] text-white">
+				{{$error}}
+			</div>
+		@endforeach
+		@endif
 		<form method="POST" action="{{route('front.booking_save', $product->slug)}}" class="flex flex-col gap-[30px] mt-[30px]">
 
       {{-- ini untuk nominal harga nya agar terhubung ke booking.js --}}
@@ -71,6 +78,7 @@
       <input type="hidden" name="duration" id="duration" value="1" class="absolute -z-10 opacity-0 w-1"
       required />
 
+			<input type= "hidden" name="store_id" id="storeId" value="" required/>
 			<div class="flex items-center justify-between px-5">
 				<label for="days" class="font-semibold">How many days?</label>
 				<div class="flex items-center gap-3 relative">

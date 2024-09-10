@@ -101,5 +101,6 @@ function toggleRequiredOptions() {
         // addressTextarea.required = true;
         addressTextarea.value = '';
         deliveryType.value = "home_delivery";
+        document.querySelector('input[name="store_id"]').value = 1;
     }
 }
