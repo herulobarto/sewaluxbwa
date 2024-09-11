@@ -1,13 +1,7 @@
-<!DOCTYPE html>
-<html>
-	<head>
-		<meta charset="UTF-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
-		<link href="{{asset('output.css')}}" rel="stylesheet" />
-		<link href="{{asset('main.css')}}" rel="stylesheet" />
-		<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
-	</head>
-	<body>
+@extends('front.layouts.app')
+@section('title', 'Your Transaction')
+@section('content')
+
 		<main class="max-w-[640px] mx-auto min-h-screen flex flex-col relative has-[#Bottom-nav]:pb-[144px]">
 			<section id="CheckBook" class="w-full flex flex-col gap-10 px-5 items-center pt-20 max-w-[353px] m-auto">
 				<div class="size-[100px] rounded-full overflow-hidden bg-[#FCCF2F] flex items-center justify-center">
@@ -161,5 +155,5 @@
 				</ul>
 			</div>
 		</main>
-	</body>
-</html>
+
+		@endsection
